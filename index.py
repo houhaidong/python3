@@ -77,7 +77,7 @@ import sys
 
 #-----------------分割线--——-----------------------
 #Tuple
-
+'''
 tuple = ('abcd',123,3.3,'hello',19.2)
 data = ('986','word')
 
@@ -95,3 +95,52 @@ tup2 = (2,)#一个元素，需要在后边添加逗号
 
 print(tup1) #输出 ()
 print(tup2)#输出(2,)
+'''
+#--------------------分割线------------------
+
+#Set
+
+#1.set集合可以使用{}或者set()
+#2.set集合是一个无序不重复元素的序列,注意：创建一个空集合必须用set()而不是{},因为{}是创建一个空字典
+#3.set集合基本功能是进行成员关系测试和删除重复元素
+'''
+set1 = {'Tom','Jim','Mary','Tom','Jack','Rose'}
+
+# print(set1)
+if 'Tom' in set1:
+	print ('yes')
+else :
+	print ('no')
+
+#set 进集合运算行
+a = set('abracadabra')
+b = set('alacazam')
+
+# print (a)
+# print (b)
+
+print (a - b)  #a和b的差集 {'d', 'b', 'r'}
+print (a | b)  #a和b的并集 {'a', 'd', 'm', 'z', 'b', 'r','l'}
+print (a & b)  #a和b的交集 {'a', 'c'}
+print (a ^ b)  #a和b中不同时存在的元素 {'z', 'b', 'r', 'd', 'm', 'l'}	
+'''
+
+#------------分割线----------------------
+#Dictionary
+#1.Dictionary是一种映射类型，字典用{}标识，他是一个key:value集合
+#2.Dictionary是有序对象集合，字典是无序集合对象。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取。
+#3.key必须使用不可变类型
+#4.在同意而字典中，key必须是唯一的
+
+dict = {};
+dict[0] = 'hello'
+dict[1] = 'word'
+dict['a'] = '!'
+tinydict = {'name':'runoob','code':1,'site':'www.www.com'};
+
+tinydict['name'] = '123'
+print(tinydict) #输出{'name': '123', 'code': 1, 'site': 'www.www.com'}
+print(tinydict.keys()) #输出dict_keys(['name', 'code', 'site'])
+print(tinydict.values()) #输出dict_values(['123', 1, 'www.www.com'])
+print(dict) #输出{0: 'hello', 1: 'word', 'a': '!'}
+print(tinydict) #输出{'name': '123', 'code': 1, 'site': 'www.www.com'}

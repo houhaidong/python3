@@ -149,7 +149,35 @@ print(tup2)#输出(2,)
 ### Set
 
 ```python
+#1.set集合可以使用{}或者set()
+#2.set集合是一个无序不重复元素的序列,注意：创建一个空集合必须用set()而不是{},因为{}是创建一个空字典
+#3.set集合基本功能是进行成员关系测试和删除重复元素
+例如：
+set1 = {'Tom','Jim','Mary','Tom','Jack','Rose'}
+
+# print(set1)
+if 'Tom' in set1:
+	print ('yes')
+else :
+	print ('no')
+
+#set 进集合运算行
+a = set('abracadabra')
+b = set('alacazam')
+
+# print (a)
+# print (b)
+
+print (a - b)  #a和b的差集 {'d', 'b', 'r'}
+print (a | b)  #a和b的并集 {'a', 'd', 'm', 'z', 'b', 'r','l'}
+print (a & b)  #a和b的交集 {'a', 'c'}
+print (a ^ b)  #a和b中不同时存在的元素 {'z', 'b', 'r', 'd', 'm', 'l'}	
 
 ```
 
+### Dictionary
 
+```python
+
+
+```
