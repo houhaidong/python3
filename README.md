@@ -50,5 +50,8 @@
 
 ## python3标准数据类型
 
+```python
+print ('hello')
+```
 
 
