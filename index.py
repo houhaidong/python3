@@ -128,10 +128,11 @@ print (a ^ b)  #a和b中不同时存在的元素 {'z', 'b', 'r', 'd', 'm', 'l'}
 #------------分割线----------------------
 #Dictionary
 #1.Dictionary是一种映射类型，字典用{}标识，他是一个key:value集合
-#2.Dictionary是有序对象集合，字典是无序集合对象。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取。
+#2.Dictionary是有序对象集合，集合是无序集合对象。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取。
 #3.key必须使用不可变类型
 #4.在同意而字典中，key必须是唯一的
 
+'''
 dict = {};
 dict[0] = 'hello'
 dict[1] = 'word'
@@ -144,3 +145,22 @@ print(tinydict.keys()) #输出dict_keys(['name', 'code', 'site'])
 print(tinydict.values()) #输出dict_values(['123', 1, 'www.www.com'])
 print(dict) #输出{0: 'hello', 1: 'word', 'a': '!'}
 print(tinydict) #输出{'name': '123', 'code': 1, 'site': 'www.www.com'}
+'''
+# a = dict([('Runoob','abc'),('Google',2),('Taobao',3)])
+
+# b = {x:x**2 for x in (2,4,6)}
+# print(b)
+# a = 10
+# b = 20
+# if (a and b ) :
+# 	print ('true1')
+# else :
+# 	print ('有一个为true')	
+
+
+#print ("我叫 %s 今年 %d 岁!" % ('a明',20))
+
+a = ['a','b','c']
+b = [1,2,3]
+n = [a,b]
+print(len(a))

@@ -71,9 +71,6 @@
   
 ```
 
-### 数值运算
-
-  +、-、*、/，//(除法得到一个整数),%,**(乘方)
 
 ### String
 
@@ -90,6 +87,10 @@ print  (str * 2)  # 输出字符串两次
 print  (str + "TEST")  # 连接字符串
 
 #python字符串不能改变，例如 str[0] = 'q'，会报错
+
+#字符串格式化(格式化符号自行百度)
+print ("我叫 %s 今年 %d 岁!" % ('小明',20))
+
 ```
 
 ### List
@@ -116,6 +117,13 @@ arr[0] = 9
 print(arr)  #输出[9,2,3,4,5,6]
 arr[2:5] = [10,11,12]
 print(arr) #输出[9,2,10,11,12,6]
+del arr[0] #删除元素
+arr += [7,8,9] #输出 [1,2,3,4,5,6,7,8,9]
+#嵌套列表
+a = ['a','b','c']
+b = [1,2,3]
+x = [a,b] #[['a','b','c'],[1,2,3]]
+x[0] #输出 ['a','b','c']
 ```
 
 ### Tuple
@@ -178,6 +186,65 @@ print (a ^ b)  #a和b中不同时存在的元素 {'z', 'b', 'r', 'd', 'm', 'l'}
 ### Dictionary
 
 ```python
+#1.Dictionary是一种映射类型，字典用{}标识，他是一个key:value集合
+#2.Dictionary是有序对象集合，集合是无序集合对象。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取。
+#3.key必须使用不可变类型
+#4.在同意而字典中，key必须是唯一的
+#5.创建空字典用 {}
 
+例如：
+dict = {};
+dict[0] = 'hello'
+dict[1] = 'word'
+dict['a'] = '!'
+tinydict = {'name':'runoob','code':1,'site':'www.www.com'};
+
+tinydict['name'] = '123'
+print(tinydict) #输出{'name': '123', 'code': 1, 'site': 'www.www.com'}
+print(tinydict.keys()) #输出dict_keys(['name', 'code', 'site'])
+print(tinydict.values()) #输出dict_values(['123', 1, 'www.www.com'])
+print(dict) #输出{0: 'hello', 1: 'word', 'a': '!'}
+print(tinydict) #输出{'name': '123', 'code': 1, 'site': 'www.www.com'}
 
 ```
+## 运算
+
+### 算术运算符
+
+  +、-、*、/，//(除法得到一个整数),%,**(乘方)
+
+### 比较运算符 
+ 
+   
+### 赋值运算符
+
+
+### 逻辑运算符
+```python
+  and('与'): 两边都为true
+  or('或') :一边为true
+  not('非'):。。。
+```
+
+### 成员运算符
+
+```python
+in : 如果在指定的序列中找到值返回 True，否则返回 False
+not in : 如果在指定的序列中没有找到值返回 True，否则返回 False
+```
+
+### 身份运算符
+
+```python
+is : is 是判断两个标识符是不是引用自一个对象
+is not : is not 是判断两个标识符是不是引用自不同对象
+#is 用于判断两个变量引用对象是否为同一个， == 用于判断引用变量的值是否相等。
+```
+
+### python 运算符优先级
+
+```python
+  详见： http://www.runoob.com/python3/python3-basic-operators.html
+```
+
+
