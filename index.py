@@ -160,7 +160,70 @@ print(tinydict) #输出{'name': '123', 'code': 1, 'site': 'www.www.com'}
 
 #print ("我叫 %s 今年 %d 岁!" % ('a明',20))
 
-a = ['a','b','c']
-b = [1,2,3]
-n = [a,b]
-print(len(a))
+# a = ['a','b','c']
+# b = [1,2,3]
+# n = [a,b]
+# print(len(a))
+
+seq = ('name','age','sex');
+
+arr = {'name':'hhd','age':'23'}
+
+# print(arr.items())
+#print(list(arr.keys()))
+#------------------------------------------------------------
+# var = 10
+
+# if var < 11:
+# 	print('xiaoyu11')
+# elif var == 10:
+# 	print('===')
+# else:
+# 	print('>>>')
+#-------------------------------------------------------------------
+
+# a = 0;
+# b = 1;
+# while b <= 100:
+# 	a = a+b
+# 	b = b+1
+
+# var = 0
+# while var < 10:
+# 	print(var,':小于10')
+# 	var = var +1
+# else:
+# 	print('大于10')
+
+#------------------------------------------------------------------
+#break 跳出循环
+# arr = ['a','b','c','d','e']
+
+# for x in arr :
+# 	if x == 'c' :
+# 		print('等于C')
+# 		break
+# 	print('循环数据：',x)
+
+# print('跳出循环')	
+
+# for i in range(10):
+# 	print(i)
+# print('------------')
+# for i in range(5,10):
+# 	print(i)
+
+#arr = ['a','b','c','d','e','f'];
+
+#  for i in range(len(arr)) :
+#  	print(i,arr[i])
+
+# for i in arr:
+# 	if i == 'c':
+# 		print('this is c')
+# 		continue
+# 	else:
+# 		print(i)	
+
+# while True:
+# 	pass

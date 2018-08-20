@@ -248,3 +248,44 @@ is not : is not 是判断两个标识符是不是引用自不同对象
 ```
 
 
+### python 流程控制语句
+
+```python
+var = 10 
+if var < 10 :
+  some code
+elif var == 10:
+  some code
+else:
+  some code
+```
+
+### python 循环
+```python
+# while 循环
+#while 条件:    #语法
+#    some code
+#else:
+#    some code
+      
+a = 0;
+b = 1;
+while b <= 100:
+	a = a+b
+	b = b+1
+
+var = 0
+while var < 10:
+	print(var,':小于10')
+	var = var +1
+else:
+	print('大于10')
+
+#for 循环
+#break 跳出循环
+#continue 跳出本次循环
+#for <variable> in <sequence>:   #语法
+#    <statements> 
+#else: 
+#      <statements>
+```
