@@ -227,3 +227,23 @@ arr = {'name':'hhd','age':'23'}
 
 # while True:
 # 	pass
+
+arr = [9,12,34,567,32,5,321,39,98];
+x = 0
+for i in range(len(arr) -1) :
+	for j in range(len(arr) - 1 - i):
+		if arr[j] >  arr[j+1] :
+			# x = arr[j]
+			# arr[j] = arr[j+1]
+			# arr[j+1] = x
+			arr[j],arr[j+1] = arr[j+1],arr[j]
+
+print(arr)
+
+
+
+
+
+
+
+

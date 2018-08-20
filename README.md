@@ -284,8 +284,23 @@ else:
 #for 循环
 #break 跳出循环
 #continue 跳出本次循环
+#pass 是空语句，是为了保持程序结构的完整性，一般用于占位符
 #for <variable> in <sequence>:   #语法
 #    <statements> 
 #else: 
 #      <statements>
+
+#冒泡排序
+arr = [9,12,34,567,32,5,321,39,98];
+x = 0
+for i in range(len(arr) -1) :
+	for j in range(len(arr) - 1 - i):
+		if arr[j] >  arr[j+1] :
+			# x = arr[j]
+			# arr[j] = arr[j+1]
+			# arr[j+1] = x
+			arr[j],arr[j+1] = arr[j+1],arr[j]
+
+print(arr)
+
 ```
