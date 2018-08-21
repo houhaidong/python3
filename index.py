@@ -298,8 +298,39 @@ print(tinydict) #输出{'name': '123', 'code': 1, 'site': 'www.www.com'}
 # 	print('test:',num)	
 
 # test()
-list = [1,2,3,4,5]
+# from collections import deque
+# list = deque(['a','b','c','e','d'])
 
-list.append(6)
+#list.append(6)  	#添加到列表的末尾
+#list.insert(1,'a') #在列表的指定位置插入
+#list.remove(2)		#移除列表中第2个值
+# list.pop([i])		#从指定位置删除，如果为空就删除最后一个
+#list.clear()		#清楚列表内容
+#print(list.index('a'))	#返回列表中第一个值为‘a’的元素的索引 
+# print(list.count('b'))#返回‘b’在列表这种出现的次数
+# list.sort()			#列表排序
+# list.reverse()		#倒排来列表中的元素
+# list.append(1)
+# list.append(2)
+# list.popleft()
+# list.popleft()
+# list1 = {'a':'hou','b':'hai','c':'dong'}
+# list1 = [1,2,3,4]
+# for x in list :
+# 	print('key:',x,'value:',list[x])
 
-print(list)
+# for k,y in list1.items():
+	# print(k,y)
+
+
+# list1 = ['a','b','c']
+# print(list(enumerate(list1)))
+# input()
+# for k,y in enumerate(list1):
+	# print(k,y)
+
+# question = ['name','age','color']
+# answers = ['hhd','23','blue']
+
+# for x,y in zip(question,answers):
+# 	print('{0} {1}'.format(x,y))

@@ -302,8 +302,25 @@ for i in range(len(arr) -1) :
 			arr[j],arr[j+1] = arr[j+1],arr[j]
 
 print(arr)
+#循环技巧
+list1 = {'a':'hou','b':'hai','c':'dong'}
+for k,y in list1.items():
+	print(k,y)         #输出    a hou  b hai   c dong
 
-```
+list1 = ['a','b','c']
+for k,y in enumerate(list1):
+	print(k,y)        #输出  0 a   1 b   2 c
+
+#遍历多个list
+question = ['name','age','color']
+answers = ['hhd','23','blue']
+for x,y in zip(question,answers):
+	print('{0} {1}'.format(x,y))    
+  
+ #输出 #name hhd
+  #age 23  
+  #color blue
+ ```
 
 ### 函数
 
