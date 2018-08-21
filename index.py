@@ -8,10 +8,10 @@
 注释
 '''
 #python 用空格区分代码块，空格必须一致，否则报错
-if True:
-	print ("True")
-else:
-	print ("False")
+# if True:
+# 	print ("True")
+# else:
+# 	print ("False")
 
 #python 多行语句用'\'来连接。[],{},()里边的多行语句可以不使用'\'
 num = 'one' + \
@@ -45,7 +45,7 @@ print('-----------')
 print(r'hello,\npython')
 '''
 
-import sys
+# import sys
 
 # for i in sys.argv:
 # 	print(i)
@@ -165,9 +165,9 @@ print(tinydict) #输出{'name': '123', 'code': 1, 'site': 'www.www.com'}
 # n = [a,b]
 # print(len(a))
 
-seq = ('name','age','sex');
+# seq = ('name','age','sex');
 
-arr = {'name':'hhd','age':'23'}
+# arr = {'name':'hhd','age':'23'}
 
 # print(arr.items())
 #print(list(arr.keys()))
@@ -227,23 +227,79 @@ arr = {'name':'hhd','age':'23'}
 
 # while True:
 # 	pass
+#冒泡排序
+# arr = [9,12,34,567,32,5,321,39,98];
+# x = 0
+# for i in range(len(arr) -1) :
+# 	for j in range(len(arr) - 1 - i):
+# 		if arr[j] >  arr[j+1] :
+# 			# x = arr[j]
+# 			# arr[j] = arr[j+1]
+# 			# arr[j+1] = x
+# 			arr[j],arr[j+1] = arr[j+1],arr[j]
 
-arr = [9,12,34,567,32,5,321,39,98];
-x = 0
-for i in range(len(arr) -1) :
-	for j in range(len(arr) - 1 - i):
-		if arr[j] >  arr[j+1] :
-			# x = arr[j]
-			# arr[j] = arr[j+1]
-			# arr[j+1] = x
-			arr[j],arr[j+1] = arr[j+1],arr[j]
+# print(arr)
+#-------------------------------------------
+# list = [1,2,3,4,5,6,7]
 
-print(arr)
+# it = iter(list)
+# print(next(it))
+# print(next(it))
 
+# for x in it:
+	# print(x,end="") 
 
+# import sys
 
+# list = [1,2,3,4,5,6,7,8]
+# it = iter(list)
+# while True:
+# 	try:
+# 		print(next(it))
+# 	except StopIteration :
+# 		print('over')
+# 		sys.exit()
 
+# def printme(name,*id):
+	
+# 	print('name:')
+# 	print(name)
+# 	print(id)
+# 	return
 
+# printme('hou','hai','dong')
 
+# def printme(id,**name):
+# 	print(id)
+# 	print(name)
 
+# printme(12,a='hou',b='hai')	
 
+# def f(id,name,*,age):
+
+# 	a = id+name+age
+# 	return a
+
+# b = f(1,2,age=3)
+# print(b)
+
+# ----------------------匿名函数-----------------
+# sum = lambda arg1,arg2:arg1*arg2
+
+# print(sum(10,10))
+# arr = 1
+# def test():
+# 	num = 10
+# 	def inner():
+# 		nonlocal num
+# 		num = 100
+# 		print('inner:',num)
+# 	inner()
+# 	print('test:',num)	
+
+# test()
+list = [1,2,3,4,5]
+
+list.append(6)
+
+print(list)

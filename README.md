@@ -304,3 +304,57 @@ for i in range(len(arr) -1) :
 print(arr)
 
 ```
+
+### 函数
+
+```python
+# 定义函数 语法 
+# def 函数名()：
+#      函数体    
+#函数参数传递 ：必需参数、关键字参数、默认参数、不定长参数
+#不定长参数： 加*的参数会以元组(tuple)的形式导入
+#            加**的参数会以字典的形式导入
+#函数中的参数单独出现*号，*号后边的参数必需用关键字传入
+#匿名函数 关键字  lambda 语法 : lambda [arg1 [,arg2,.....argn]]:expression
+#-----------------关键字参数--------------------------
+def  printme(str): 
+  print  (str)  
+  return  
+#调用printme函数 
+printme(str = "hello")   #传关键字参数
+#---------不定长参数--------------
+def printme(name,*id):
+	print('name:')
+	print(name)
+	print(id)
+	return
+printme('hou','hai','dong')  #输出 hou  ('hai','dong')
+
+def printme(id,**name):
+	print(id)
+	print(name)
+
+printme(12,a='hou',b='hai')	#输出 12  {'a':'hou','b':'hai'}
+
+def f(a,b,*,c):
+    return a+b+c
+
+f(1,2,c=3)
+#----------------------匿名函数-------------------
+sum = lambda arg1,arg2 : agr1+agr2
+print(sum(10,20))  #输出 30
+
+#变量作用域
+
+total = 0  # 这是一个全局变量    
+def  sum(  arg1, arg2  ):  
+total = arg1 + arg2  # total在这里是局部变量.  
+print  ("函数内是局部变量 : ", total)  
+return  total  
+#调用sum函数  
+sum(  10, 20  )  
+print  ("函数外是全局变量 : ", total)    #输出 函数内是局部变量  :  30  函数外是全局变量  :  0
+
+#当内部作用域想修改外部作用域的变量时，就要用到global和nonlocal关键字。
+
+```
