@@ -295,7 +295,7 @@ print(tinydict) #输出{'name': '123', 'code': 1, 'site': 'www.www.com'}
 # 		num = 100
 # 		print('inner:',num)
 # 	inner()
-# 	print('test:',num)	
+# 	print('test:',num)
 
 # test()
 # from collections import deque
@@ -331,6 +331,59 @@ print(tinydict) #输出{'name': '123', 'code': 1, 'site': 'www.www.com'}
 
 # question = ['name','age','color']
 # answers = ['hhd','23','blue']
-
+#
 # for x,y in zip(question,answers):
 # 	print('{0} {1}'.format(x,y))
+#-----------------------检查是否可以迭代（遍历----------------
+from collections.abc import Iterable
+# print(isinstance('abcsdf',Iterable))
+# print(isinstance([1,2,3],Iterable))
+# print(isinstance(123,Iterable))
+
+# list = {'name':'hou','age':'23','gener':'man'}
+# #
+# # for x,y in list.items():
+# # 	print(x,y)
+# list = ['a','b','c','d']
+# for x,y in enumerate(list):
+# 	print(x,y)
+#----------------列表生成式------------------------------------------
+
+# q = [x * x for x in range(1,11)]
+# print(q)
+# a = [x*x for x in range(1,11) if x%2 == 0]
+# print(a)
+# one = ['a','b','c']
+# two = ['x','y','z']
+# c = [a+b for a in one for b in two]
+# print(c)
+
+# import os
+# print([d for d in os.listdir('.')]) #os.listdir 可以列出文件和目录
+
+# a = {'a':'A','b':'B','c':'C','d':'D'}
+# print([x+'='+y for x,y in a.items()])
+
+# L = ['HELLO','World','Apple']
+# print([s.lower() for s in L])
+
+# L = ['HELLO','World','Apple',13,'iphone']
+# a = [x.lower() for x in L if isinstance(x,str)]
+# print(a)
+
+
+def fib(max):
+	n,a,b = 0,0,1
+	while n < max:
+		yield b
+		a,b = b,a+b
+		n = n+1
+	return 'none'
+g = fib(6)
+while True:
+	try:
+		x = next(g)
+		print('g',x)
+	except StopIteration as e:
+		print('Generator return value:',e.value)
+		break
