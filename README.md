@@ -392,3 +392,33 @@ a = [x.lower() for x in L if isinstance(x,str)]
 print(a)       #输出 ['hello', 'world', 'apple', 'iphone']
 
 ```
+
+### 生成器
+
+```python
+
+```
+
+### 迭代器
+
+```python
+
+```
+
+### 高阶函数
+```python
+#变量可以指向函数
+abs(-10) #输出 10
+
+f = abs
+f(-10)  #输出 10
+
+#函数名也可以是变量
+abs = 10
+abs(-10) #会报错
+
+#传入函数
+def add(x,y,f):
+  return f(x)+f(y)
+add(-1,2,abs)  #输出 3
+```

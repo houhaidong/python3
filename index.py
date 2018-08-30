@@ -371,19 +371,129 @@ from collections.abc import Iterable
 # a = [x.lower() for x in L if isinstance(x,str)]
 # print(a)
 
+#斐波那契数列
+# def fib(max):
+# 	n,a,b = 0,0,1
+# 	while n < max:
+# 		yield b
+# 		a,b = b,a+b
+# 		n = n+1
+# 	return 'none'
+# g = fib(6)
+# while True:
+# 	try:
+# 		x = next(g)
+# 		print('g',x)
+# 	except StopIteration as e:
+# 		print('Generator return value:',e.value)
+# 		break
 
-def fib(max):
-	n,a,b = 0,0,1
-	while n < max:
-		yield b
-		a,b = b,a+b
-		n = n+1
-	return 'none'
-g = fib(6)
-while True:
-	try:
-		x = next(g)
-		print('g',x)
-	except StopIteration as e:
-		print('Generator return value:',e.value)
-		break
+# def f(x):
+# 	return x*x
+#
+# a = map(str,[1,2,3,4,5])
+# # print(list(a))
+# b = 10
+#
+# print(type(b))
+
+from functools import reduce
+#
+# a = {'0':0,'1':1,'2':2}
+#
+# def num(s):
+# 	arr = {'0':0,'1':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9}
+# 	return arr[s]
+#
+# def fn(x,y):
+# 	a = x*10+y
+# 	return a
+# b = reduce(fn,map(num,'13579'))
+# print(b)
+# arr = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}
+# def strint(num):
+# 	def strToInt(s):
+# 		return arr[s]
+# 	def add(x,y):
+# 		return x*10+y
+# 	return reduce(add,map(strToInt,num))
+#
+# print(strint('13579'))
+
+#利用map()函数，把用户输入的不规范的英文名字，变为首字母大写，其他小写的规范名字。输入：['adam', 'LISA', 'barT']，输出：['Adam', 'Lisa', 'Bart']：
+# def fn(x):
+# 	return x[0].upper()+x[1:].lower()
+#
+# a = ['adam','LISA','barT']
+# b = ['a','b','c']
+# print(list(map(fn,a)))
+
+#Python提供的sum()函数可以接受一个list并求和，请编写一个prod()函数，可以接受一个list并利用reduce()求积：
+# def fn(x,y):
+# 	return x*y
+# print(reduce(fn,[3,5,7,9]))
+
+# def fn(arr):
+# 	return arr%2==1
+#
+# print(list(filter(fn,[1,2,3,4,5,6,7,8,9])))
+#
+# def fn1(s):
+# 	return s and s.strip()
+#
+# print(list(filter(fn1,['1','2','','4',None])))
+
+# def fn():
+# 	n=1
+# 	while n<100:
+# 		n=n+1
+# 		yield n
+
+# print(sorted([2,1,4,-3,5,-9],key=abs))
+#
+# print(sorted(['Basd','Cmnd','asde','eDDS'],key=str.lower))
+#
+# L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
+# print(sorted(L))
+#
+# def by_name(t):
+# 	return t[0].lower()
+# def by_score(t):
+# 	return t[1]
+# print(sorted(L,key=by_name))
+# print(sorted(L,key=by_score,reverse=True))
+
+# def lazy_sum(*args):
+#
+# 	def sum():
+# 		a = 0
+# 		for x in args:
+# 			a = a + x
+# 		return a
+# 	return sum
+#
+# b = lazy_sum(1,2,3,4)
+# print(b)
+# print(b())
+
+# def count():
+# 	fs = []
+# 	def app():
+# 		for x in range(1,4):
+# 			x = x * x
+# 			fs.append(x)
+# 	app()
+# 	return fs
+
+def count2():
+	fs = []
+	for x in range(1,4):
+		def app2():
+			return x*x
+		fs.append(app2)
+	return fs
+
+
+# print(count2())
+f1,f2,f3 = count2()
+print(f1())
